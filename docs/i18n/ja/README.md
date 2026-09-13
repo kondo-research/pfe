@@ -18,7 +18,7 @@
 - 論文を読む: [論文](01-papers/README.md) から PDF へ。
 - 数値を自分で確かめる: [検証](02-verification/README.md) を実行し、[結果](03-results/README.md) と比べる。
 - 引用する: [論文 › 引用](01-papers/README.md#引用)。
-- ウェブサイト: <https://www.kondo-lab.com/>
+- ウェブサイト: <https://www.kondo-research.org/>
 
 ## このフォルダについて
 

@@ -23,7 +23,7 @@ These pages accompany the published paper repository. The papers themselves live
 - To read the paper: [Papers](01-papers/README.md), then the PDF.
 - To check a number yourself: [Verification](02-verification/README.md), then compare with [Results](03-results/README.md).
 - To cite: [Papers › Citation](01-papers/README.md#citation).
-- Website: <https://www.kondo-lab.com/>
+- Website: <https://www.kondo-research.org/>
 
 ## About this folder
 
