@@ -16,6 +16,7 @@ navigation:
 
 | 版 | 日付 | 題名 | Zenodo | 要約 |
 | --- | --- | --- | --- | --- |
+| v4.3.0 | 2026-09-26 | Physics from Existence I: The Equation | [22984378](https://zenodo.org/records/22984378) | 概要を書き換え（数値は3つに。不確定性の拡張先を「存在」そのものに）；§5.1 の $\sin^2\theta_W$ の実測不確かさを ±0.00006 に是正（PDG 2026）。他は v4.2.0 と同一で、導出値の変更なし。 |
 | v4.2.0 | 2026-09-21 | Physics from Existence I: The Equation | [22883521](https://zenodo.org/records/22883521) | 語法の是正: 公理が述べる存在に「宇宙の」を付けない（§1 に約束の一文）；概要を書き換え；$v$ を論文 II と同期（246.2215 GeV、+0.0008%）；§11 末尾の続稿案内と投稿前監査の是正。 |
 | v4.1.1 | 2026-09-01 | Physics from Existence I: The Equation | [22217837](https://zenodo.org/records/22217837) | 正誤: 最終査読の所見4件（§1 の条件数、§10 の帰還項込み評価、語の置換、表 2 の $R_{\mathrm{up}}$ を2行に）。数値変更なし。 |
 | v4.1.0 | 2026-08-31 | Physics from Existence I: The Equation | [22216256](https://zenodo.org/records/22216256) | $d = 3$ を2条件から導出；$\mathrm{PG}(2,\mathbb F_3)$ を $d$ を入力とせずに構成；絶対スケールを $v$ から $m_e$ へ移し、$v$ が予測量に（246.2360 GeV）；帰還項込みの評価；外部査読への対応。 |

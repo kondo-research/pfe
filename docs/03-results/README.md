@@ -5,7 +5,7 @@ navigation:
 
 # Results
 
-The three tables below are Tables 2–4 of Paper I (v4.2.0). "II" in the source column means the quantity is derived in Paper II and shown in Paper I with that attribution; other entries give the section of Paper I. Relative differences are taken with respect to the comparison central value; rows quoted in σ compare against the experimental uncertainty.
+The three tables below are Tables 2–4 of Paper I (v4.3.0). "II" in the source column means the quantity is derived in Paper II and shown in Paper I with that attribution; other entries give the section of Paper I. Relative differences are taken with respect to the comparison central value; rows quoted in σ compare against the experimental uncertainty.
 
 ## Comparison with Standard Model constants
 

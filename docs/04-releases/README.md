@@ -16,6 +16,7 @@ navigation:
 
 | Version | Date | Title | Zenodo | Summary |
 | --- | --- | --- | --- | --- |
+| v4.3.0 | 2026-09-26 | Physics from Existence I: The Equation | [22984378](https://zenodo.org/records/22984378) | Abstract rewritten (three headline values; the indefiniteness is extended to existence itself); experimental uncertainty of $\sin^2\theta_W$ in §5.1 corrected to ±0.00006 (PDG 2026). Otherwise identical to v4.2.0; no change to any derived value. |
 | v4.2.0 | 2026-09-21 | Physics from Existence I: The Equation | [22883521](https://zenodo.org/records/22883521) | Wording: the existence the axioms speak of is no longer qualified as that of the universe (a convention sentence added in §1); abstract rewritten; $v$ resynchronised with Paper II (246.2215 GeV, +0.0008%); §11 closing pointer and pre-submission audit fixes. |
 | v4.1.1 | 2026-09-01 | Physics from Existence I: The Equation | [22217837](https://zenodo.org/records/22217837) | Errata: four findings of the final review (§1 condition count, §10 feedback-term evaluation, wording, $R_{\mathrm{up}}$ shown as two rows in Table 2). No numerical changes. |
 | v4.1.0 | 2026-08-31 | Physics from Existence I: The Equation | [22216256](https://zenodo.org/records/22216256) | $d = 3$ from two conditions; $\mathrm{PG}(2,\mathbb F_3)$ constructed without $d$ as input; absolute scale moved from $v$ to $m_e$, so $v$ becomes a prediction (246.2360 GeV); evaluations including the feedback term; external-review fixes. |

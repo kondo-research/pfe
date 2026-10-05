@@ -12,30 +12,28 @@ navigation:
 | | |
 | --- | --- |
 | Author | Hidekazu Kondo, Kondo Research Institute, Tokyo, Japan |
-| Current version | **v4.2.0** (2026-09-21) |
-| Zenodo record | <https://zenodo.org/records/22883521> · DOI 10.5281/zenodo.22883521 |
+| Current version | **v4.3.0** (2026-09-26) |
+| Zenodo record | <https://zenodo.org/records/22984378> · DOI 10.5281/zenodo.22984378 |
 | All versions | DOI [10.5281/zenodo.19451887](https://doi.org/10.5281/zenodo.19451887) |
 | Length | 38 pages (English), 45 pages (Japanese) |
 
 ### Abstract
 
-No theory derives the 26 free parameters of the Standard Model simultaneously. From one binary degree of freedom and its occupation probability $\sigma$, we derive the Schrödinger equation, the basic equation of quantum theory, and a structure corresponding to the Standard Model.
+In quantum theory the existence of a quantum object, that is, whether a mode is occupied, is in general not definite; it is given only as a probability. This paper extends this indefiniteness to existence itself: for one binary degree of freedom $n \in \{0,1\}$ with occupation probability $\sigma$ it posits three axioms, existence is bivalent ($n^2{=}n$), existence is uncertain ($\sigma{\neq}1$), and non-existence is forbidden ($\sigma{\neq}0$), and shows that these alone fix the canonical free energy $V = -H$ as an algebraic identity ($H$ is the binary Shannon entropy, $-H$ the Legendre transform of the log partition function). It then shows that the algebraic expansion of this one equation alone yields a Schrödinger equation for the internal degree of freedom, that the number of its bound states yields a structure corresponding to the Standard Model, and that this structure reproduces its 26 physical constants with no adjustable parameters; the nineteen derived here agree with measurement to 0.0006%–2.6%.
 
-The paper posits only three axioms: existence is binary ($n \in \{0,1\}$, $n^2{=}n$), existence is uncertain ($\sigma{\neq}1$), and non-existence is forbidden ($\sigma{\neq}0$). The Legendre transform of the logarithm of the partition function that gives Fermi–Dirac occupation statistics yields $V = -H(\sigma)$ as an algebraic identity, where $H$ is the binary Shannon entropy and $-H$ is the canonical free energy of one binary degree of freedom.
+With the canonically normalised kinetic term ($g = 1$), $V = -H$ yields the Schrödinger equation as a transfer matrix; neither the depth nor the width of its well can be chosen, and it admits exactly three bound states, the three fermion generations ($N = 3$). The spatial dimension $d = 3$ follows from well preservation and gravity propagation. The Lie algebra on the finite geometry $PG(2,3)$ built from $N = 3$ corresponds to $\mathrm{SU}(3){\times}\mathrm{SU}(2){\times}\mathrm{U}(1)$.
 
-With the canonically normalised kinetic term ($g = 1$), a Schrödinger equation follows from the continuum limit of the transfer matrix. The depth $\ln 2$ and the width of the well are fixed; it has exactly three bound states ($N = 3$), corresponding to the three fermion generations. The spatial dimension $d = 3$ follows from well preservation and gravity propagation. The Lie algebra on the finite geometry built from $N = 3$ corresponds to $\mathrm{SU}(3){\times}\mathrm{SU}(2){\times}\mathrm{U}(1)$.
-
-The 19 constants derived here agree with measurement to 0.0006%–2.6%; with the 7 derived in Paper II, the 26 physical constants are reproduced with no adjustable parameters. They include $1/\alpha = 137.0368$ (0.0006%), $\alpha_s(M_Z) = 0.1179$ (0.07%), $\sin^2\!\theta_W = 3/13 = 0.23077$ (0.23122 at $M_Z$ with the next correction, <0.01%), the charged-lepton mass ratio $R = \ln(m_\tau/m_e)/\ln(m_\mu/m_e) = 1.5293$ (0.006%), and $\sin\theta_C = 0.2245$ (0.10%; 0.22435 after screening). Setting the absolute scale with the electron mass $m_e$, we predict the absolute neutrino masses without oscillation data ($\Sigma m_\nu = 59.37$ meV). Neutrinoless double beta decay is predicted to vanish exactly. All values are reproducible with the accompanying verification code.
+From this structure follow $1/\alpha = 137.0368$ (0.0006%), $\sin^2\!\theta_W = 0.23122$ (<0.01%), and the charged-lepton mass ratio $R = 1.5293$ (0.006%). The absolute scale is set by the electron mass alone; without oscillation data we predict the absolute neutrino masses, $\Sigma m_\nu = 59.37$ meV, and an exact zero for neutrinoless double beta decay. These are not independent inputs: all follow from the structure fixed by $V = -H$. All values are reproducible with the accompanying code.
 
 ### Full text
 
 The complete paper is included here as Markdown in both languages, so it can be
 read in place:
 
-| Language | Full text | Built from the manuscript sealed for v4.2.0 (SHA-256) |
+| Language | Full text | Built from the manuscript sealed for v4.3.0 (SHA-256) |
 | --- | --- | --- |
-| English | [Physics from Existence I: The Equation](physics_from_existence.md) | `84a499b127a06402533742514f760445a36b2f92b4f81cc0cce0012edf4962d8` |
-| 日本語 | [存在からの物理学 I: The Equation](../i18n/ja/01-papers/physics_from_existence.md) | `2562ed92ad61d3ab62fef9060e3a367a246e293c8c88483f36ad320c71d6a525` |
+| English | [Physics from Existence I: The Equation](physics_from_existence.md) | `cddf906d1e0737eeecf66cf5843af888cb6b8a5cd9d28a76ed373f7e225d9a9c` |
+| 日本語 | [存在からの物理学 I: The Equation](../i18n/ja/01-papers/physics_from_existence.md) | `9e3b5169c82059a071b1f8653defe3524804b6a3fb2309605b2254f5177bd812` |
 
 In Lunascape Docs the locale switcher moves between the two; on GitHub, follow
 the links above.
@@ -71,7 +69,7 @@ File names are fixed across versions; each release replaces their contents and i
 
 ### Citation
 
-> Kondo, H. (2026). *Physics from Existence I: The Equation* (v4.2.0). Zenodo. https://doi.org/10.5281/zenodo.22883521
+> Kondo, H. (2026). *Physics from Existence I: The Equation* (v4.3.0). Zenodo. https://doi.org/10.5281/zenodo.22984378
 
 To cite the work independently of version, use the concept DOI, which always resolves to the latest version: https://doi.org/10.5281/zenodo.19451887
 
@@ -81,9 +79,9 @@ To cite the work independently of version, use the concept DOI, which always res
   title     = {Physics from Existence I: The Equation},
   year      = {2026},
   publisher = {Zenodo},
-  version   = {v4.2.0},
-  doi       = {10.5281/zenodo.22883521},
-  url       = {https://doi.org/10.5281/zenodo.22883521}
+  version   = {v4.3.0},
+  doi       = {10.5281/zenodo.22984378},
+  url       = {https://doi.org/10.5281/zenodo.22984378}
 }
 ```
 

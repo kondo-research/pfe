@@ -6,13 +6,11 @@
 
 ## Abstract
 
-No theory derives the 26 free parameters of the Standard Model simultaneously. From one binary degree of freedom and its occupation probability σ, we derive the Schrödinger equation, the basic equation of quantum theory, and a structure corresponding to the Standard Model.
+In quantum theory the existence of a quantum object, that is, whether a mode is occupied, is in general not definite; it is given only as a probability. This paper extends this indefiniteness to existence itself: for one binary degree of freedom n ∈ {0,1} with occupation probability σ it posits three axioms, existence is bivalent (n² = n), existence is uncertain (σ ≠ 1), and non-existence is forbidden (σ ≠ 0), and shows that these alone fix the canonical free energy V = −H as an algebraic identity (H is the binary Shannon entropy, -H the Legendre transform of the log partition function). It then shows that the algebraic expansion of this one equation alone yields a Schrödinger equation for the internal degree of freedom, that the number of its bound states yields a structure corresponding to the Standard Model, and that this structure reproduces its 26 physical constants with no adjustable parameters; the nineteen derived here agree with measurement to 0.0006%–2.6%.
 
-The paper posits only three axioms: existence is binary (n ∈ {0,1}, n² = n), existence is uncertain (σ ≠ 1), and non-existence is forbidden (σ ≠ 0). The Legendre transform of the logarithm of the partition function that gives Fermi–Dirac occupation statistics yields V = −H(σ) as an algebraic identity, where H is the binary Shannon entropy and −H is the canonical free energy of one binary degree of freedom.
+With the canonically normalised kinetic term (g = 1), V = −H yields the Schrödinger equation as a transfer matrix; neither the depth nor the width of its well can be chosen, and it admits exactly three bound states, the three fermion generations (N = 3). The spatial dimension d = 3 follows from well preservation and gravity propagation. The Lie algebra on the finite geometry PG(2,3) built from N = 3 corresponds to SU(3)×SU(2)×U(1).
 
-With the canonically normalised kinetic term (g = 1), a Schrödinger equation follows from the continuum limit of the transfer matrix. The depth ln 2 and the width of the well are fixed; it has exactly three bound states (N = 3), corresponding to the three fermion generations. The spatial dimension d = 3 follows from well preservation and gravity propagation. The Lie algebra on the finite geometry built from N = 3 corresponds to SU(3)×SU(2)×U(1).
-
-The 19 constants derived here agree with measurement to 0.0006%–2.6%; with the 7 derived in Paper II, the 26 physical constants are reproduced with no adjustable parameters. They include 1/α = 137.0368 (0.0006%), α_s(M_Z) = 0.1179 (0.07%), sin²θ_W = 3/13 = 0.23077 (0.23122 at M_Z with the next correction, <0.01%), the charged-lepton mass ratio R = ln(m_τ/m_e)/ln(m_μ/m_e) = 1.5293 (0.006%), and sinθ_C = 0.2245 (0.10%; 0.22435 after screening). Setting the absolute scale with the electron mass m_e, we predict the absolute neutrino masses without oscillation data (Σm_ν = 59.37 meV). Neutrinoless double beta decay is predicted to vanish exactly. All values are reproducible with the accompanying verification code.
+From this structure follow 1/α = 137.0368 (0.0006%), sin²θ_W = 0.23122 (<0.01%), and the charged-lepton mass ratio R = 1.5293 (0.006%). The absolute scale is set by the electron mass alone; without oscillation data we predict the absolute neutrino masses, Σm_ν = 59.37 meV, and an exact zero for neutrinoless double beta decay. These are not independent inputs: all follow from the structure fixed by V = −H. All values are reproducible with the accompanying code.
 
 # 1. Introduction
 
@@ -348,7 +346,7 @@ This angle also fixes the tree-level W/Z mass ratio (§5.4).
 
 $$\Delta_\mathrm{rad} = \alpha\cdot\frac{5N^3}{|\mathrm{PG}|^3} = \alpha\cdot\frac{135}{2197} = 0.00045$$
 
-(N and |PG| are quantities of this paper; the uniqueness of this product form, including the coefficient 5, is proved as a theorem^II^.) This gives sin²θ_W = 3/13 + Δ_rad = 0.23077 + 0.00045 = 0.23122, in agreement with the MS-bar experimental value 0.23122 ± 0.00003 [22] within errors.
+(N and |PG| are quantities of this paper; the uniqueness of this product form, including the coefficient 5, is proved as a theorem^II^.) This gives sin²θ_W = 3/13 + Δ_rad = 0.23077 + 0.00045 = 0.23122, in agreement with the MS-bar experimental value 0.23122 ± 0.00006 [22] within errors.
 
 ## 5.2. Strong Coupling Constant
 
