@@ -6,13 +6,13 @@
 
 ## Abstract
 
-No theory has simultaneously derived all 26 free parameters of the Standard Model. In this paper, extending the quantum indefiniteness of existence to the existence of the universe itself, we posit three axioms about existence — existence is bivalent (n ∈ {0,1}, i.e. n² = n), existence is uncertain (σ ≠ 1), and non-existence is forbidden (σ ≠ 0) — and show that they uniquely determine the single equation V = −H as an algebraic identity, and that the mathematical structure derived from its exact algebraic expansion corresponds to the structures of the Standard Model. As a result, the 26 physical constants of the Standard Model are reproduced with no adjustable parameters. Of these, the nineteen derived in this paper agree with the established measured values to 0.0006%–2.6%.
+No theory derives the 26 free parameters of the Standard Model simultaneously. From one binary degree of freedom and its occupation probability σ, we derive the Schrödinger equation, the basic equation of quantum theory, and a structure corresponding to the Standard Model.
 
-Derived from the axioms of existence, V = −H is the canonical free energy of a single binary degree of freedom n ∈ {0,1}, determined as the Legendre transform of the Fermi-Dirac distribution. From this potential and the kinetic term of the canonical normalisation (g = 1, §3.1), the Schrödinger equation is derived as a transfer matrix, and we show that it has exactly three bound states (discrete solutions, N = 3), corresponding to the three generations of fermions. The spatial dimension d = 3 follows from two conditions — preservation of the well and propagating gravity — and the Lie-algebra structure unfolding on the finite geometry constructed from N = 3 corresponds to the structure of the gauge group SU(3)×SU(2)×U(1) (the coincidence of the two numbers, N = d = 3, is an independent consistency).
+The paper posits only three axioms: existence is binary (n ∈ {0,1}, n² = n), existence is uncertain (σ ≠ 1), and non-existence is forbidden (σ ≠ 0). The Legendre transform of the logarithm of the partition function that gives Fermi–Dirac occupation statistics yields V = −H(σ) as an algebraic identity, where H is the binary Shannon entropy and −H is the canonical free energy of one binary degree of freedom.
 
-Twenty-six physical constants are derived from this structure, including 1/α = 137.035999084 (all orders, matching CODATA 2018 to all displayed digits; the leading term is 137.0368 at 0.0006%), α_s = 0.1179 (0.07%), sin²θ_W = 0.23122 (<0.01%), the charged-lepton mass ratio R = 1.5293 (0.006%), and sinθ_C = 0.2245 (0.10%). The results further predict the absolute neutrino masses (Σm_ν = 59.37 meV, with no oscillation input) and strictly zero neutrinoless double-beta decay, among other testable predictions. These quantities are not independent input parameters — they are all computed from the same mathematical structure fixed by V = −H.
+With the canonically normalised kinetic term (g = 1), a Schrödinger equation follows from the continuum limit of the transfer matrix. The depth ln 2 and the width of the well are fixed; it has exactly three bound states (N = 3), corresponding to the three fermion generations. The spatial dimension d = 3 follows from well preservation and gravity propagation. The Lie algebra on the finite geometry built from N = 3 corresponds to SU(3)×SU(2)×U(1).
 
-All of these numerical values are reproducible with the accompanying verification code.
+The 19 constants derived here agree with measurement to 0.0006%–2.6%; with the 7 derived in Paper II, the 26 physical constants are reproduced with no adjustable parameters. They include 1/α = 137.0368 (0.0006%), α_s(M_Z) = 0.1179 (0.07%), sin²θ_W = 3/13 = 0.23077 (0.23122 at M_Z with the next correction, <0.01%), the charged-lepton mass ratio R = ln(m_τ/m_e)/ln(m_μ/m_e) = 1.5293 (0.006%), and sinθ_C = 0.2245 (0.10%; 0.22435 after screening). Setting the absolute scale with the electron mass m_e, we predict the absolute neutrino masses without oscillation data (Σm_ν = 59.37 meV). Neutrinoless double beta decay is predicted to vanish exactly. All values are reproducible with the accompanying verification code.
 
 # 1. Introduction
 
@@ -22,9 +22,9 @@ Despite many attempts — grand unified theories (GUTs), supersymmetry (SUSY), s
 
 Approaches that derive physics from information theory have also been attempted. Wheeler's "it from bit" [4] proposed the vision that physical reality arises from information, but had no mathematical framework. Jaynes [5] derived statistical mechanics from entropy maximisation, but did not reach quantum field theory. Verlinde [7] derived gravity from entropic reasoning, but gravity alone. There are also Frieden's Fisher-information approach [6], Caticha's information geometry [8], and the information-theoretic axiomatisations of Hardy [9] and Chiribella et al. [10]. The prior work closest in spirit is the Connes–Chamseddine spectral Standard Model [39, 40, 41], which derives the structure of the gauge group and the Higgs sector from noncommutative geometry (a related algebraic reconstruction is Furey's division-algebra approach [42]). All these approaches share a common limitation: they can derive the *form* of physical equations, but not the *values* of the constants appearing in them.
 
-Now, "Why do I exist? Why does the universe exist?" — who has not, at some point, let their thoughts dwell on such questions? Traditionally, they have been regarded as purely philosophical questions, beyond the scope of physics. In fact, however, quantum theory has already established a decisive fact about the very notion of existence. As is well known, the existence of a quantum object — whether a mode is occupied — is in general not definite, and is given only as a probability. In other words, at the microscopic level, existence is not a settled given. If so, might the "existence" of the universe itself perhaps behave in the same way? What happens if that question is written down as an equation? That is the starting point of this paper.
+Now, "Why do I exist? Why does the universe exist?" — who has not, at some point, let their thoughts dwell on such questions? Traditionally, they have been regarded as purely philosophical questions, beyond the scope of physics. In fact, however, quantum theory has already established a decisive fact about the very notion of existence. As is well known, the existence of a quantum object — whether a mode is occupied — is in general not definite, and is given only as a probability. In other words, at the microscopic level, existence is not a settled given. If so, might the "existence" of the universe itself perhaps behave in the same way? What happens if that question is written down as an equation? That is the starting point of this paper. In what follows, "the existence of the universe" means the very fact of existing; "the universe" is the totality of what exists, not a single global solution equipped with spacetime, fields, and initial data.
 
-This paper first formalises this question about the existence of the universe as three axioms — Existence (n ∈ {0,1}), Uncertainty (σ ≠ 1), and Non-existence is forbidden (σ ≠ 0). Together A2 and A3 determine σ ∈ (0,1), a partition function Z = 1 + e^φ, and, via the Legendre transform of the Fermi–Dirac distribution, the canonical free energy V = −H(σ(φ)) as an algebraic identity, where H is the binary Shannon entropy, σ(φ) is the Fermi–Dirac distribution (sigmoid function), and φ = logit(σ) is the natural parameter [14, 15].
+This paper first formalises this question as three axioms about existence — Existence (n ∈ {0,1}), Uncertainty (σ ≠ 1), and Non-existence is forbidden (σ ≠ 0). Together A2 and A3 determine σ ∈ (0,1), a partition function Z = 1 + e^φ, and, via the Legendre transform of the Fermi–Dirac distribution, the canonical free energy V = −H(σ(φ)) as an algebraic identity, where H is the binary Shannon entropy, σ(φ) is the Fermi–Dirac distribution (sigmoid function), and φ = logit(σ) is the natural parameter [14, 15].
 
 Combining this potential V = −H(σ(φ)) with the kinetic term of the canonical normalisation (g = 1, §3.1), the Schrödinger equation is derived as a transfer matrix. Carrying the computation further, this Schrödinger equation has exactly three bound states (N = 3), and a structure corresponding to the three generations of fermions appears. At the same time, the spatial dimension d = 3 follows from two conditions — preservation of the well and propagating gravity. The spacetime dimension is D = d + 1 = 4, supported as consistency checks under stated premises by the gravitational degree-of-freedom count, by ℂP², and by the connection of the signature (3,1) to the M₂(ℂ)_sa structure (§3.4, §9). From N = 3 the finite geometry PG(2, F₃) is fixed (the coincidence of the two numbers, N = d = 3, is an independent consistency), and the Lie-algebra structure unfolding from its 9+3+1 partition corresponds uniquely to the structure of the gauge group SU(3)×SU(2)×U(1).
 
@@ -56,7 +56,7 @@ What is bivalent is the *proposition* of existence, not a claim that the world i
 
 **A2 (Uncertainty):** Existence is uncertain. Whatever exists does not exist with certainty: the occupation probability σ = ⟨n⟩ satisfies σ ≠ 1. A2 excludes the upper endpoint (certain existence) but says nothing about the lower endpoint.
 
-If existence were certain (σ = 1), it would be an immovable background: nothing left to ask, nothing left to happen. As quantum theory teaches, microscopic existence is given only as a probability — A2 lifts this fact to the existence of the universe itself. Existence is not a given but something that *occurs*, carrying uncertainty. This one sentence is what later generates the statistical ensemble and the dynamics.
+If existence were certain (σ = 1), it would be an immovable background: nothing left to ask, nothing left to happen. As quantum theory teaches, microscopic existence is given only as a probability — A2 lifts this fact to existence itself. Existence is not a given but something that *occurs*, carrying uncertainty. This one sentence is what later generates the statistical ensemble and the dynamics.
 
 **A3 (Prohibition of non-existence):** Non-existence is not a state (σ ≠ 0). A way of being that consists in not-being is a contradiction.
 
@@ -112,14 +112,17 @@ $$A1\text{–}A3 \;\Rightarrow\; n^2 = n,\; 0<\sigma<1 \;\Rightarrow\; Z = 1+e^{
 
 # 3. Derivation of the Schrödinger Equation and N = d = 3
 
-V = −H is a potential; by itself it does not yet say how many discrete states exist. This chapter first derives the eigenvalue equation — the Schrödinger equation — from the same exponential-family structure as the potential (§3.1). The spectral question — how many bound states the well holds — then becomes well-posed, and its answer is N = 3 (§3.2–3.3). At the end of §3.3 the three bound states are identified with the three generations of fermions — the one physical identification this chapter makes. Only under that identification does the second question arise: the particles the bound states represent exist in real space, so what determines the dimension of that space? Realisation consistency answers it, and d = 3 follows (§3.4). The derivation of d = 3 makes no use of the value N = 3 — the two derivations share the operator and nothing else. The coincidence N = d = 3 becomes the input of §4.
+V = −H is a potential; by itself it does not yet say how many discrete states exist. This chapter first derives the eigenvalue equation — the Schrödinger equation — from the same exponential-family structure as the potential (§3.1). The spectral question — how many bound states the well holds — then becomes well-posed, and its answer is N = 3 (§3.2–3.3). At the end of §3.3 the three bound states are identified with the three generations of fermions — the one physical identification this chapter makes. Only under that identification does the second question arise: the particles the bound states represent exist in real space, so what determines the dimension of that space? Realisation consistency answers it, and d = 3 follows (§3.4). The derivation of d = 3 makes no use of the value N = 3 — the two derivations share the operator and nothing else. The value N = 3 supplies the input of §4; the coincidence N = d = 3 is an independent consistency check.
 ## 3.1. Derivation of the Schrödinger Equation
 
 To write the eigenvalue equation, a kinetic term is needed in addition to the potential of §2.3, and it follows from the same structure as the potential. Dynamics enters by reading the canonical ensemble of §2 as sequential transfer: a family of transfer operators that, at each step, exponentiate the quadratic variation of the displacement (the kinetic term) together with V = −H (the action weight); its continuum limit yields the eigenvalue equation at the end of this section^II^. Two data remain: the coordinate carrying the motion, and one dimensionless normalisation. Both are fixed uniquely; the uniqueness is proved^II^.
 
 First, the coordinate. The exponential family of a binary variable has two natural coordinates:
 
-$$u = 2\arcsin\sqrt{\sigma}\quad(\text{Fisher metric flat}),\qquad \phi = \mathrm{logit}(\sigma)\quad(\text{canonical parameter in the exponent})$$
+$$\begin{aligned}
+u &= 2\arcsin\sqrt{\sigma} &&(\text{Fisher metric flat}),\\
+\phi &= \mathrm{logit}(\sigma) &&(\text{canonical parameter in the exponent})
+\end{aligned}$$
 
 A3 decides between them. The coordinate u places the forbidden point σ = 0 at the finite endpoint u = 0, so dynamics on u would need boundary data exactly at the point of non-existence — non-existence would become a repository of model-defining data. The coordinate φ sends σ = 0 to φ → −∞: no boundary data attaches to non-existence, and under A3 none is admissible. Among the admissible coordinates, φ is the one on which the tilting action of A1 (the tilting weight e^{nφ}, §2.2) is linear — unique up to affine maps — and the binary indicator n ∈ {0,1} fixes its scale. Free motion on φ therefore has a constant-coefficient quadratic Lagrangian; position-dependent coefficients are excluded by displacement homogeneity^II^.
 
@@ -147,7 +150,7 @@ $$A1\text{--}A3 \;\Rightarrow\; n^2 = n,\; 0<\sigma<1 \;\Rightarrow\; Z = 1+e^{\
 
 ## 3.2. Three Bound States
 
-Why do fermions come in exactly three generations — why τ, μ, e, and why not a fourth? This and the following subsection prove rigorously that the potential V = −H has exactly three bound states and no fourth (hereafter N = 3), and identify them with the three generations of fermions. The identification is corroborated by the agreement of the mass ratios and mixing angles in §7.
+Why do fermions come in exactly three generations — why τ, μ, e, and why not a fourth? This and the following subsection prove rigorously that the potential V = −H has exactly three bound states and no fourth (hereafter N = 3), and identify them with the three generations of fermions. The identification is corroborated by the agreement of the mass ratios and mixing angles in §7–§8.
 
 The potential V = −H is a well. It is deepest at the centre (φ = 0) where V = −ln 2, returning to zero at both ends φ → ±∞. In quantum mechanics, such a well confines discrete energy levels — by the same principle that the hydrogen atom confines electrons to discrete orbitals. In general, how many levels a well holds is set by two free parameters, its depth and its width — a deep, wide well holds many levels, a shallow, narrow well holds few.
 
@@ -235,7 +238,7 @@ The previous chapter derived two numbers: the bound-state count of the Schrödin
 
 What gauge structure arises from N = 3? The key is degeneracy. Within this construction, a continuous internal rotation symmetry is carried by degeneracy — directions with the same internal energy.
 
-On the Standard-Model side, quark colour (red, green, blue) is the archetype: every colour has the same energy, so the continuous rotation symmetry SU(3) stands. On the derived side, the generations — the three bound states of V = −H — all have distinct energies (E₀ ≠ E₁ ≠ E₂, by the Sturm-Liouville theorem), so a preferred eigenbasis exists. The symmetry preserving this basis is discrete and cannot support a continuous gauge group.[^gencas] The gauge directions therefore cannot arise from the interchange of generations — they must come from the geometry of the space F₃³, which we now construct.
+On the Standard-Model side, quark colour (red, green, blue) is the archetype: every colour has the same energy, so the continuous rotation symmetry SU(3) stands. On the derived side, the generations — the three bound states of V = −H — all have distinct energies (E₀ ≠ E₁ ≠ E₂, by the Sturm-Liouville theorem), so a preferred eigenbasis exists. Continuous transformations preserving the three non-degenerate levels act only by phases on the eigenstates; they do not provide non-abelian rotations mixing the generations.[^gencas] The gauge directions therefore cannot arise from the interchange of generations — they must come from the geometry of the space F₃³, which we now construct.
 
 [^gencas]: The contact index b = 8/3 in the mass formula of §7.1 is derived from the finite incidence geometry and is compatible with this (its numerical agreement with the SU(3) Casimir is an N = 3-only consistency check, §7.1).
 
@@ -442,7 +445,7 @@ $$V''(0) = g_F(0) = \sigma(1-\sigma)\big|_{\sigma=1/2} = \tfrac{1}{4}$$
 
 $$m_H/v = \sqrt{V''(0)} = 1/2 \quad (LO)$$
 
-The NLO correction enters from all |PG| = 13 modes of the Laplacian matrix ℒ:
+The NLO correction is distributed over all 13 directions of the projective plane (§5.2):
 
 $$m_H/v = \frac{1}{2}\sqrt{1 + 2\varepsilon/|PG|} = 0.5084 \quad (\text{expt: } 0.5082,\; 0.03\%)$$
 
@@ -575,7 +578,7 @@ $$R_\nu = R_\mathrm{lepton} = 1.529$$
 
 This is the input-free prediction of this section. Together with the spectral ratio (m₃/m₂)² = 169/5 established below, it fixes the *dimensionless* mass ray completely, with no oscillation input at all.
 
-Absolute masses in meV require one quantity that carries the dimensionless internal quantities into human units. This paper takes it to be the electron mass m_e = 0.51099895069(16) MeV (CODATA 2022 [34]) — the most precisely measured particle mass (relative 3 × 10⁻¹⁰), and a member of the linked mass system of charged leptons and neutrinos. This one point fixes the internal mass unit, and the electroweak scale v becomes a quantity predicted in that unit: v = 246.2360 GeV (+6.7 × 10⁻⁵ against the 246.2196 GeV fixed by the Fermi constant G_F = 1.1663788(6) × 10⁻⁵ GeV⁻²)^II^. No second scale is needed for the neutrino sector, and m_e itself is not counted as an independent prediction. The mass ratio between the lightest neutrino and the electron is derived from the specified operator word and read as a physical mass ratio in the same unit^II^:
+Absolute masses in meV require one quantity that carries the dimensionless internal quantities into human units. This paper takes it to be the electron mass m_e = 0.51099895069(16) MeV (CODATA 2022 [34]) — the most precisely measured particle mass (relative 3 × 10⁻¹⁰), and a member of the linked mass system of charged leptons and neutrinos. This one point fixes the internal mass unit, and the electroweak scale v becomes a quantity predicted in that unit: v = 246.2215 GeV (+7.5 × 10⁻⁶ against the 246.2196 GeV fixed by the Fermi constant G_F = 1.1663788(6) × 10⁻⁵ GeV⁻²)^II^. No second scale is needed for the neutrino sector, and m_e itself is not counted as an independent prediction. The mass ratio between the lightest neutrino and the electron is derived from the specified operator word and read as a physical mass ratio in the same unit^II^:
 
 $$\frac{m_1}{m_e} = x^3\,\frac{7}{6}\Bigl(1 + \frac{\varepsilon^2}{9}\Bigr) = 6.097 \times 10^{-10},\qquad x = \frac{9\alpha}{26\pi}$$
 
@@ -588,7 +591,7 @@ Here x is the expansion quantity of §5.3, which reappears in §8.1 as the colou
 | m_3 | 50.39 meV | Consistent |
 | Σm_i | 59.37 meV | Below Planck (<120) |
 
-[^numass]: The displayed digits depend on where the higher-order charged-lepton evaluation used for the absolute normalisation is truncated; an identification concerning corrections beyond the displayed order is not yet fixed, and the displayed digits carry that condition^II^. Since the mass ray is fixed internally, all three masses scale with the common unit. The theory has no free parameters. Normal ordering is an input condition in this section; its independent derivation is given as a theorem^II^ (a consequence of R_ν > 1 and (m₃/m₂)² = 169/5 > 1). These values are consequences of setting the absolute scale m_e, and are not counted as independent predictions.
+[^numass]: The tabulated values use the higher-order charged-lepton evaluation and the ratio of the lightest neutrino mass to the electron mass derived in Paper II^II^. Since the mass ray is fixed internally, all three masses scale with the common unit. The theory has no free parameters. Normal ordering is an input condition in this section; its independent derivation is given as a theorem^II^ (a consequence of R_ν > 1 and (m₃/m₂)² = 169/5 > 1). These are predictions of the theory after setting the absolute scale with m_e. The electron mass itself is not an independent prediction, and the individual masses and their sum, which follow from the same mass ray, must not be counted as mutually independent predictions.
 
 In that same unit, both oscillation splittings become quantities to be compared only after the computation is complete: Δm²₂₁ = 7.5016 × 10⁻⁵ eV² (against the measured 7.537 × 10⁻⁵ eV², −0.47%) and Δm²₃₁ = 2.5387 × 10⁻³ eV² (against the measured 2.521 × 10⁻³ eV², +0.70%). One degree of freedom tests this common unit, however, so the two must not be counted as two independent tests; their ratio tests the mass ray discussed next.
 
@@ -683,7 +686,7 @@ $$\sin²θ_{23} = (7/13)(1 + ε/13) = 0.5475 \quad (\text{second octant})$$
 
 The LO fraction 7/13 exceeds 1/2, predicting the second octant. In NuFIT 6.1 [28] the global best fit has moved to the first octant (sin²θ₂₃ = 0.470), but the octant is unresolved and the prediction 0.5475 lies within the 3σ range (0.432–0.587). The second-octant local minimum of the NuFIT 6.1 χ² profile lies at 0.550, and the prediction deviates from it by 0.45%.[^nufitgrid]
 
-[^nufitgrid]: The local minimum is obtained from the released grid by projecting over Δm²₃₁ and δ_CP; it lies at Δχ² ≈ 1.03 above the global minimum, with a grid step of 0.005 in sin²θ₂₃. Unless stated otherwise, all NuFIT 6.1 values quoted in this paper are the without-SK-atm, normal-ordering set, consistent with the Δm² inputs used above.
+[^nufitgrid]: The local minimum is obtained from the released grid by projecting over Δm²₃₁ and δ_CP; it lies at Δχ² ≈ 1.03 above the global minimum, with a grid step of 0.005 in sin²θ₂₃. Unless stated otherwise, all NuFIT 6.1 values quoted in this paper are the without-SK-atm, normal-ordering set, consistent with the Δm² comparison values quoted above.
 
 The reactor angle is sin²θ_{13} = 1/(N·|PG|) = 1/39 with NLO correction (k = N = 3):
 
@@ -699,7 +702,7 @@ The CKM phase does not reduce to a single closed-form expression of ε alone: it
 
 $$\delta_{\rm CKM} = 62.595^\circ,\qquad \beta = 23.972^\circ,\qquad \gamma = 62.560^\circ$$
 
-with the experimental values δ_CKM = 66.1° and γ = 66.4° [22]. Because β and γ follow rigidly from the same unitary matrix, their deviations from experiment are one and the same phase difference and are not counted as two independent tests^II^. The three angles and J are derived independently, so |sinδ| ≤ 1 is a non-trivial constraint; it holds for ε ≳ 0.204, and the derived value 0.2192 lies inside. Each transition formula formally tends to zero as ε → 0, but the four fit into a single unitary CKM matrix only in that range; they do not define a common ε → 0 CKM family.
+with the experimental values δ_CKM = 66.1° and γ = 66.4° [22]. Because β and γ follow rigidly from the same unitary matrix, the deviations of δ_CKM and γ from experiment reflect the same phase difference and are not counted as two independent tests^II^. The three angles and J are derived independently, so |sinδ| ≤ 1 is a non-trivial constraint; it holds for ε ≳ 0.204, and the derived value 0.2192 lies inside. Each transition formula formally tends to zero as ε → 0, but the four fit into a single unitary CKM matrix only in that range; they do not define a common ε → 0 CKM family.
 
 ## 8.3. Neutrino Properties
 
@@ -711,7 +714,7 @@ With this, fermion mass ratios (§7), mixing angles, and neutrino properties hav
 
 # 9. Connection to Spacetime
 
-All calculations in §2–8 were performed in internal space (the φ coordinate). Neither space nor time appeared. How, then, does this zero-dimensional theory connect to four-dimensional spacetime? This chapter answers in three steps: the dimension and signature (3,1) of spacetime (§9.1), the independence of internal space and spacetime (§9.2), and why the zero-dimensional algebraic values correspond to the four-dimensional experimental values (§9.3).
+The spectral calculations of §§2–8 concern the internal coordinate φ. Section 3.4 examined consistency with a spatial realisation; we now develop the connection to four-dimensional spacetime. This chapter answers in three steps: the dimension and signature (3,1) of spacetime (§9.1), the independence of internal space and spacetime (§9.2), and why the zero-dimensional algebraic values correspond to the four-dimensional experimental values (§9.3).
 
 ## 9.1. Spacetime Dimension and Gravity
 
@@ -828,7 +831,7 @@ The full list of results is given below (experimental values from PDG 2026 [22],
 | m_W/m_Z (on-shell identification) | 0.88137 | 0.8813 | +1.0σ | II |
 | **Higgs** | | | | |
 | m_H/v (→ λ) | 0.5084 | 0.5082 | 0.03% | §6 |
-| v (electroweak scale, GeV) | 246.2360 | 246.2196 | +0.0067% | II |
+| v (electroweak scale, GeV) | 246.2215 | 246.2196 | +0.0008% | II |
 | **Fermion masses** | | | | |
 | R_lepton (→ y_e, y_μ, y_τ) | 1.5293 | 1.5294 | 0.006% | §7.1 |
 | Q (Koide) | 1.499985 | 1.500005(11) | 2σ | §7.1 |
@@ -861,19 +864,21 @@ The full list of results is given below (experimental values from PDG 2026 [22],
 
 | Prediction | Value | Verification experiment | § |
 |---|---|---|---|
-| Δm²₃₁/Δm²₂₁ | 33.84, from the full relation (leading m₃/m₂ = 13/√5, non-zero m₁ included) | JUNO [26] (2026–27) | II |
+| Δm²₃₁/Δm²₂₁ | 33.84, from the full relation (leading m₃/m₂ = 13/√5, non-zero m₁ included) | JUNO [26] | II |
 | 1/α (all orders) | 137.035999084 — the Cs/Rb recoil discrepancy resolves on the Cs side | next-generation photon-recoil / g−2 comparisons | II |
-| θ₂₃ octant | Second (>45°) | DUNE / HK (~2030) | §8.2 |
-| δ_PMNS | 2π(7/13)(1+ε/13) = 197.1° | DUNE / HK (~2030) | II |
+| θ₂₃ octant | Second (>45°) | DUNE / HK | §8.2 |
+| δ_PMNS | 2π(7/13)(1+ε/13) = 197.1° | DUNE / HK | II |
 | R_ν (mass ratio; input-free) | 1.529 (= R_lepton) | osc. + absolute mass | §7.3 |
-| Σm_ν | 59.37 meV (m_e as the single absolute scale, no oscillation input; ≈ NO min. 58.9) | CMB-S4 [27] (~2030) | §7.3, Paper II |
-| m₁ | 0.3116 meV (m_e as the single absolute scale) | CMB-S4 (via Σm_ν) | §7.3, Paper II |
-| 0νββ | Exactly zero | nEXO [29] (~2030) | §8.3 |
-| Koide deviation δ | −1.5 × 10⁻⁵ | Belle II [33] (2027–30) | §7.1 |
+| Σm_ν | 59.37 meV (m_e as the single absolute scale, no oscillation input; ≈ NO min. 58.9) | Cosmological measurements of Σm_ν[^cmbstatus] | §7.3, Paper II |
+| m₁ | 0.3116 meV (m_e as the single absolute scale) | Cosmological measurements via Σm_ν | §7.3, Paper II |
+| 0νββ | Exactly zero | nEXO [29] | §8.3 |
+| Koide deviation δ | −1.5 × 10⁻⁵ | Belle II [33] | §7.1 |
+
+[^cmbstatus]: Reference [27] gives sensitivity forecasts for the former CMB-S4 project. Following the end of DOE and NSF support in July 2025, the project is undergoing an orderly shutdown (CMB-S4 official statement, https://cmb-s4.org/ , accessed 21 September 2026).
 
 [^frunit]: One further prediction on an open experimental dispute, of the same kind as the 1/α entry: first-row CKM unitarity is exact^II^, and the |V_ud| dispute — global fit 0.97431(16) versus the direct superallowed 0⁺→0⁺ value 0.97367(32) — resolves on the unitarity side.
 
-The Standard Model treats these physical quantities as independent parameters to be measured and input, but the derivation in this paper has no input parameters. All numerical results above can be independently reproduced with the accompanying verification-code suite, which prints for every entry of Tables 1–4 whether it is evaluated, interval-certified, comparison-only, or not implemented here — some quantities derived in Paper II are not evaluated by this paper’s code.
+The Standard Model treats these physical quantities as independent parameters to be measured and input, but the derivation in this paper has no input parameters. The accompanying verification-code suite states for every entry of Tables 1–4 whether it is evaluated, interval-certified, comparison-only, or not implemented here. The quantities marked as evaluated or interval-certified can be reproduced with this suite; some quantities derived in Paper II are not evaluated here.
 
 # 11. Conclusion
 
@@ -883,7 +888,7 @@ $$V = -H(\sigma(\phi))$$
 
 and can be described as a necessity from this equation derived from the axioms of existence.
 
-Paper II [20] treats the derivation of the seven quantities listed in §10, the spectral proof of the gauge decomposition 9+3+1, and a more detailed account of the uniqueness of the construction used in this paper. Subsequent papers extend this framework to gravity, the Universe, and the unification of forces.
+Paper II [20] treats the derivation of the seven quantities listed in §10, the spectral proof of the gauge decomposition 9+3+1, and a more detailed account of the uniqueness of the construction used in this paper. Subsequent work will address gravity, cosmology, and the common origin of forces within the same framework.
 
 *To be, or not to be — that is the equation.*
 
@@ -935,7 +940,7 @@ To the information theorists, mathematicians, and physicists whose profound insi
 
 [21] Weinberg, S. Phys. Rev. Lett. **19**, 1264 (1967).
 
-[22] Particle Data Group (F. Takahashi et al.), to be published in Int. J. Mod. Phys. A **41**, 2630011 (2026); 2026 web edition, https://pdg.lbl.gov/2026/
+[22] Particle Data Group (F. Takahashi et al.), Int. J. Mod. Phys. A **41**, 2630011 (2026); 2026 web edition, https://pdg.lbl.gov/2026/
 
 [23] Koide, Y. Lett. Nuovo Cim. **34**, 201 (1982).
 

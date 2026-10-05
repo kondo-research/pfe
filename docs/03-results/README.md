@@ -5,7 +5,7 @@ navigation:
 
 # Results
 
-The three tables below are Tables 2–4 of Paper I (v4.1.1). "II" in the source column means the quantity is derived in Paper II and shown in Paper I with that attribution; other entries give the section of Paper I. Relative differences are taken with respect to the comparison central value; rows quoted in σ compare against the experimental uncertainty.
+The three tables below are Tables 2–4 of Paper I (v4.2.0). "II" in the source column means the quantity is derived in Paper II and shown in Paper I with that attribution; other entries give the section of Paper I. Relative differences are taken with respect to the comparison central value; rows quoted in σ compare against the experimental uncertainty.
 
 ## Comparison with Standard Model constants
 
@@ -19,7 +19,7 @@ The three tables below are Tables 2–4 of Paper I (v4.1.1). "II" in the source 
 | $m_W/m_Z$ (on-shell identification) | 0.88137 | 0.8813 | +1.0σ | II |
 | **Higgs** | | | | |
 | $m_H/v$ | 0.5084 | 0.5082 | 0.03% | 6 |
-| $v$ (electroweak scale, GeV) | 246.2360 | 246.2196 | +0.0067% | II |
+| $v$ (electroweak scale, GeV) | 246.2215 | 246.2196 | +0.0008% | II |
 | **Fermion masses** | | | | |
 | $R_{\mathrm{lepton}}$ | 1.5293 | 1.5294 | 0.006% | 7.1 |
 | $Q$ (Koide) | 1.499985 | 1.500005(11) | 2σ | 7.1 |

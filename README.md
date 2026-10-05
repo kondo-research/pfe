@@ -6,9 +6,9 @@ Formalizing what it means "to exist" uniquely yields a single equation, *V = −
 This equation contains no free parameters, yet the 26 physical constants of the Standard Model are reproduced from it with no adjustable parameters.
 This suggests the existence of a new framework in which information theory describes matter and the universe.
 
-**Current version:** v4.1.1 — *Physics from Existence I: The Equation* (2026-09-01)
+**Current version:** v4.2.0 — *Physics from Existence I: The Equation* (2026-09-21)
 
-**Zenodo:** https://zenodo.org/records/22217837 · all versions: https://doi.org/10.5281/zenodo.19451887
+**Zenodo:** https://zenodo.org/records/22883521 · all versions: https://doi.org/10.5281/zenodo.19451887
 
 **Web:** [Kondo Research Institute](https://www.kondo-research.org/)
 

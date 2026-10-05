@@ -1,9 +1,9 @@
 #!/usr/bin/env python3
 """
-PFE Paper I Verification Script — v4.1.1
+PFE Paper I Verification Script — v4.2.0
 ========================================================
 Experimental references: CODATA 2022 / PDG 2026 / NuFIT 6.1
-(JHEP 12 (2024) 216). Formulas follow the v4.1.1 manuscript:
+(JHEP 12 (2024) 216). Formulas follow the v4.2.0 manuscript:
 NLO forms 1±ℓε/k (sinθ_C: 1+ε/9; sin²θ₁₃: 1−2ε/3), the
 screened Cabibbo expression and the neutrino master relation are
 printed as informational lines with their Paper II attribution.
@@ -189,7 +189,7 @@ def run_paper1(phi_max=100, n_grid=1600001):
     Q_exp = koide_Q([m_tau, m_mu, m_e])
 
     print("=" * 80)
-    print("  PAPER I VERIFICATION — v4.1.1")
+    print("  PAPER I VERIFICATION — v4.2.0")
     print("  20+ predictions from V = -H(σ(φ)), zero free parameters")
     print(f"  Grid: PHI_MAX={phi_max}, N_GRID={n_grid}, dφ={dphi:.8f}")
     print(f"  Experimental: CODATA 2022 / PDG 2026 / NuFIT 6.1")
@@ -287,8 +287,8 @@ def run_paper1(phi_max=100, n_grid=1600001):
     # phi = 200, and a single outward sweep is useless because the sign change
     # collapses to width ~exp(-2kT).  That costs minutes, so the default run
     # cites the literals.  Both checks are available on demand:
-    #   --certify    rigorous +-1e-24 windows via the shipped certificate
-    #                (supplementary/proof_E_taylor_enclosures_20260718.py)
+    #   --certify    rigorous windows (E0/E1: +-1e-24; E2: +-1e-22) via the shipped certificate
+    #                (supplementary/certificates/proof_E_taylor_enclosures_20260718.py)
     #   --recompute  regenerate eps and E_0,E_1,E_2 from scratch with the same
     #                Taylor recurrence in plain arithmetic, then redo 1/alpha
     #                (recompute_constants() at the end of this file)
@@ -728,10 +728,11 @@ def _run_certificate():
     import pathlib
     import subprocess
     import sys
-    # The certificate sits beside this script in the ancillary package and under
-    # supplementary/ in the repository; look in both.
+    # The certificate is shipped under supplementary/certificates; retain the
+    # older locations as fallbacks.
     here = pathlib.Path(__file__).resolve().parent
-    for cand in (here / "proof_E_taylor_enclosures_20260718.py",
+    for cand in (here / "supplementary" / "certificates" / "proof_E_taylor_enclosures_20260718.py",
+                 here / "proof_E_taylor_enclosures_20260718.py",
                  here / "supplementary" / "proof_E_taylor_enclosures_20260718.py"):
         if cand.exists():
             script = cand
@@ -739,7 +740,7 @@ def _run_certificate():
     else:
         script = here / "proof_E_taylor_enclosures_20260718.py"
     print(f"\n{'='*78}")
-    print("  RIGOROUS RE-CERTIFICATION of the eigenvalue literals (+-1e-24)")
+    print("  RIGOROUS RE-CERTIFICATION of the eigenvalue literals (E0/E1: +-1e-24; E2: +-1e-22)")
     print(f"  {script.name}  --  about 15 s per eigenvalue")
     print(f"{'='*78}")
     if not script.exists():
@@ -814,7 +815,7 @@ if __name__ == "__main__":
     parser.add_argument("--n-grid", type=int, default=1600001)
     parser.add_argument("--certify", action="store_true",
                         help="rigorously re-certify the eigenvalue literals "
-                             "(+-1e-24 windows) with the shipped certificate; "
+                             "(E0/E1: +-1e-24; E2: +-1e-22 windows) with the shipped certificate; "
                              "about 15 s per eigenvalue")
     parser.add_argument("--recompute", action="store_true",
                         help="regenerate eps and E_0,E_1,E_2 from scratch and "
